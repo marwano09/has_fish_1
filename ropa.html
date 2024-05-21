@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fish Recipes</title>
+  <!-- Slick Carousel CSS -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css"/>
+
+  <style>
+    /* CSS for table styling */
+    /* CSS for table styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+th, td {
+  padding: 5px; /* Reduced padding */
+  text-align: left;
+}
+th {
+  background-color: #f2f2f2;
+}
+/* Additional styling for the table */
+.spices-table {
+  font-size: 14px; /* Reduced font size */
+}
+.spices-table img {
+  width: 50px; /* Adjust image size */
+  height: auto;
+}
+.spices-table td {
+  border: none; /* Remove borders */
+}
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+    th {
+      background-color: #f2f2f2;
+    }
+    /* Random CSS styles */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+    p {
+      margin-bottom: 20px;
+    }
+    .dish-photo {
+      width: 200px; /* increased image size */
+      height: 200px;
+      display: block;
+      margin: 0 auto;
+    }
+    .confirm-btn {
+      display: block;
+      margin: 20px auto;
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    /* Additional styling for the slider */
+    .slider {
+      width: 80%;
+      margin: 20px auto;
+    }
+    .slider img {
+      display: block;
+      margin: 0 auto;
+    }
+    .slider p {
+      text-align: center;
+    }
+    /* CSS for checkboxes */
+    .checkbox-container {
+      display: inline-block;
+      vertical-align: middle;
+      position: relative;
+      margin-right: 10px;
+      margin-top: -10px; /* moved checkbox up a bit */
+    }
+    .checkbox-container input[type="checkbox"] {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+    }
+    .checkmark {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 25px;
+      width: 25px;
+      background-color: #eee;
+      border: 1px solid #ccc;
+    }
+    .checkbox-container input[type="checkbox"]:checked + .checkmark:after {
+      content: "";
+      position: absolute;
+      display: block;
+      left: 9px;
+      top: 5px;
+      width: 5px;
+      height: 10px;
+      border: solid #4CAF50;
+      border-width: 0 3px 3px 0;
+      transform: rotate(45deg);
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Fish Recipes</h1>
+  <p>Choose the type of fish you want:</p>
+
+  <!-- Slider -->
+  <div class="slider">
+    <div>
+      <div class="checkbox-container">
+        <input type="checkbox" id="minced" name="fish_type" value="minced">
+        <label for="minced" class="checkmark"></label>
+      </div>
+      <img src="images/hashi.jpg" alt="Minced Fish" class="dish-photo">
+      <p>This is a minced fish recipe, perfect for those who prefer a finer texture.</p>
+    </div>
+    <div>
+      <div class="checkbox-container">
+        <input type="checkbox" id="normal_peeled" name="fish_type" value="normal_peeled">
+        <label for="normal_peeled" class="checkmark"></label>
+      </div>
+      <img src="images/mna9i.jpg" alt="Normal Peeled" class="dish-photo">
+      <p>This recipe features normal peeled fish, great for a classic fish dish.</p>
+    </div>
+    <div>
+      <div class="checkbox-container">
+        <input type="checkbox" id="peeled_with_spices" name="fish_type" value="peeled_with_spices">
+        <label for="peeled_with_spices" class="checkmark"></label>
+      </div>
+      <img src="images/mna9i avec2.jpg" alt="Peeled with Spices" class="dish-photo">
+      <p>This option offers peeled fish with added spices for extra flavor.</p>
+    </div>
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Option</th>
+        <th>Description</th>
+        <th>Photo</th>
+        <th>Add Spices</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Our Secret Spices</td>
+        <td>Discover the unique blend of spices that make our fish recipes extraordinary.</td>
+        <td><img src="images/secret2.jpg" alt="Our Secret Spices" class="dish-photo"></td>
+        <td><input type="checkbox" name="spices" value="secret"></td>
+      </tr>
+      <tr>
+        <td>Garlic Butter</td>
+        <td>Infuse your fish with the rich flavor of garlic and butter for a savory delight.</td>
+        <td><img src="images/garlic.jpg" alt="Garlic Butter" class="dish-photo"></td>
+        <td><input type="checkbox" name="spices" value="garlic"></td>
+      </tr>
+      <tr>
+        <td>Citrus Marinade</td>
+        <td>Enhance the freshness of your fish with a zesty citrus marinade.</td>
+        <td><img src="images/herb.jpg" alt="Citrus Marinade" class="dish-photo"></td>
+        <td><input type="checkbox" name="spices" value="citrus"></td>
+      </tr>
+      <tr>
+        <td>Herb Crust</td>
+        <td>Coat your fish with a crunchy herb crust for a burst of flavor and texture.</td>
+        <td><img src="images/citurs.jpg" alt="Herb Crust" class="dish-photo"></td>
+        <td><input type="checkbox" name="spices" value="herb"></td>
+      </tr>
+      <!-- Add more options here -->
+    </tbody>
+  </table>
+
+  <button class="confirm-btn" onclick="confirmOrder()">Confirm Order</button>
+
+  <!-- Slick Carousel JavaScript -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+
+  <script>
+    // Initialize Slick Carousel
+    $(document).ready(function(){
+      $('.slider').slick({
+        autoplay: true,
+        autoplaySpeed: 2000,
+        dots: true,
+        arrows: false,
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1
+      });
+    });
+
+    function confirmOrder() {
+      alert("Your order is being prepared. We will call you to confirm shortly.");
+      window.location.href = "index.html";
+    }
+  </script>
+
+</body>
+</html>
